@@ -1,0 +1,4 @@
+<mat-toolbar>My App</mat-toolbar>
+<mat-action-list>
+  <button mat-list-item *ngFor='let post of posts' (click)='navigate(post.id)'>{{ post.title }}</button>
+</mat-action-list>
