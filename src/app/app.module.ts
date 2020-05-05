@@ -6,13 +6,13 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
-import { DetailComponent } from "./detail/detail.component";
 import { HomeComponent } from "./home/home.component";
 import { MaterialModule } from "./material.module";
 import { RoutingModule } from "./routing.module";
+import { SnakeComponent } from "./snake/snake.component";
 
 @NgModule({
-  declarations: [AppComponent, DetailComponent, HomeComponent],
+  declarations: [AppComponent, SnakeComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

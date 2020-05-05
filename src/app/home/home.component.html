@@ -1,4 +1,18 @@
-<mat-toolbar>My App</mat-toolbar>
-<mat-action-list>
-  <button mat-list-item *ngFor='let post of posts' (click)='navigate(post.id)'>{{ post.title }}</button>
-</mat-action-list>
+<mat-toolbar color='primary'>Mini projects</mat-toolbar>
+<div class='container' fxLayout="row" fxLayoutAlign="flex-start center" fxLayoutGap="30px">
+  <mat-card (click)='navigate(1)'>
+    <img mat-card-image src='../../assets/snake.jpg'>
+    <mat-card-content>Snake game</mat-card-content>
+    <mat-card-actions>game</mat-card-actions>
+  </mat-card>
+  <mat-card>
+    <img mat-card-image src='../../assets/recognition.jpg'>
+    <mat-card-content>Image recognition</mat-card-content>
+    <mat-card-actions>machine learning</mat-card-actions>
+  </mat-card>
+  <mat-card>
+    <img mat-card-image src='../../assets/virus.jpg'>
+    <mat-card-content>Coronavirus tracker</mat-card-content>
+    <mat-card-actions>Web services</mat-card-actions>
+  </mat-card>
+</div>

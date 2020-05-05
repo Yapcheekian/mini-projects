@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { Post } from "../services/post.interface";
-import { PostService } from "../services/post.service";
 
 @Component({
   selector: "app-home",
@@ -9,17 +7,15 @@ import { PostService } from "../services/post.service";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  posts: Post[];
+  constructor(private router: Router) {}
 
-  constructor(private postService: PostService, private router: Router) {}
+  ngOnInit() {}
 
-  ngOnInit() {
-    this.postService.getAll().subscribe((posts) => {
-      this.posts = posts;
-    });
-  }
-
-  navigate(id: number) {
-    this.router.navigateByUrl(`/${id}`);
+  navigate(id: Number) {
+    switch (id) {
+      case 1:
+        this.router.navigateByUrl("/snake");
+        break;
+    }
   }
 }
